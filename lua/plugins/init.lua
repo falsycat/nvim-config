@@ -142,6 +142,16 @@ return {
       "folke/snacks.nvim",
     },
     config = true,
+    opts = {
+      track_selection = false,
+      diff_opts = {
+        layout = "vertical",
+        open_in_new_tab = true,
+        keep_terminal_focus = true,
+        hide_terminal_in_new_tab = false,
+        auto_close_on_accept = true,
+      },
+    },
   },
   {
     "RRethy/vim-illuminate",  -- highlight a word under the cursor
