@@ -25,6 +25,16 @@ vim.opt.wrapscan = true
 -- menu
 vim.opt.wildmenu = true
 
+-- autoreloading
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+})
+
 -- setup plugins
 require("config.lazy")
 
