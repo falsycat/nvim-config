@@ -184,4 +184,9 @@ return {
       })
     end,
   },
+  {
+    "falsycat/ledger.nvim",
+    ft = { "ledger" },
+    opts = {},
+  },
 }
