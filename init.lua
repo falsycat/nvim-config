@@ -53,9 +53,7 @@ vim.api.nvim_create_autocmd("LspAttach", {  -- enabled when LSP is active
     vim.keymap.set("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "References" }))
   end,
 })
-vim.keymap.set("n", "<Leader>cc", "<Cmd>ClaudeCode<CR>", { noremap = true, silent = true, desc = "Open" })
-vim.keymap.set("n", "<Leader>cf", "<Cmd>ClaudeCodeFocus<CR>", { noremap = true, silent = true, desc = "Focus" })
-vim.keymap.set("n", "<Leader>cr", "<Cmd>ClaudeCode --resume<CR>", { noremap = true, silent = true, desc = "Resume" })
+vim.keymap.set("n", "<Leader>cc", "<Cmd>ClaudeCodeToggle<CR>", { noremap = true, silent = true, desc = "Open ClaudeCode" })
 vim.keymap.set("n", "<Leader>tt", "<Cmd>1ToggleTerm<CR>", { noremap = true, silent = true, desc = "Terminal 1" })
 vim.keymap.set("n", "<Leader>t1", "<Cmd>1ToggleTerm<CR>", { noremap = true, silent = true, desc = "Terminal 1" })
 vim.keymap.set("n", "<Leader>t2", "<Cmd>2ToggleTerm<CR>", { noremap = true, silent = true, desc = "Terminal 2" })

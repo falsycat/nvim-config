@@ -137,21 +137,8 @@ return {
     opts = {},
   },
   {
-    "coder/claudecode.nvim",  -- claude code integration
-    dependencies = {
-      "folke/snacks.nvim",
-    },
+    "falsycat/claudecode.nvim",  -- claude code integration
     config = true,
-    opts = {
-      track_selection = false,
-      diff_opts = {
-        layout = "vertical",
-        open_in_new_tab = true,
-        keep_terminal_focus = true,
-        hide_terminal_in_new_tab = false,
-        auto_close_on_accept = true,
-      },
-    },
   },
   {
     "RRethy/vim-illuminate",  -- highlight a word under the cursor
@@ -177,7 +164,6 @@ return {
       local wk = require("which-key")
       wk.setup()
       wk.add({
-        { "<Leader>c", group = "Claude" },
         { "<Leader>f", group = "Find (Telescope)" },
         { "<Leader>t", group = "Terminal" },
         { "<Leader>r", group = "Refactor (LSP)" },
